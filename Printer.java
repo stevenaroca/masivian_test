@@ -1,5 +1,5 @@
 public class Printer{
-    private int rr = 10;
+    private int rr = 50;
     private int cc = 4;
     private int numbers[];
 
@@ -12,7 +12,7 @@ public class Printer{
         this.rr = rows;
         this.cc = columns;
     }
-    
+
     public void print(){
         int PAGENUMBER = 1;
         int PAGEOFFSET = 1;
