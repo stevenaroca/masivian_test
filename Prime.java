@@ -1,31 +1,33 @@
 public class Prime{
 
-    private int m;
-    private int p[];
+    private int amountNumbers;
+    private int arrNumbers[];
 
-    public Prime(int m){
-        this.m = m;
-        this.p = new int[m+1];
+    public Prime(int amount){
+        this.amountNumbers = amount;
+        this.arrNumbers = new int[amount+1];
     }
 
     public int[] getNumbers(){
-        int i =0;
-        int num =0;
-        int k = 1;
+        int prime = 0;
+        int num = 0;
+        int position = 1;
 
-        while(k <= this.m){
-            i++;
-            int counter=0;
-            for(num =i; num>=1; num--){
-                if(i%num==0)
- 		            counter = counter + 1;
-	        }
-	        if (counter ==2){
-	            this.p[k] = i;
-	            k++;
-	        }
+        while(position <= this.amountNumbers){
+            prime++;
+            int counter = 0;
+            for(num = prime; num>=1; num--){
+              if(prime%num == 0)
+ 		           counter += 1;
+              if(counter > 2)
+                break;
+	          }
+	          if (counter == 2 ){
+	            this.arrNumbers[position] = prime;
+	            position++;
+	          }
         }
-        return this.p;
+        return this.arrNumbers;
     }
 
 }
