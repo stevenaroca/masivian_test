@@ -16,7 +16,7 @@ public class Printer{
     public void print(){
         int pageNumber = 1;
         int pageOffset = 1;
-        int rowOffset,colum;
+        int rowOffset,column;
 
         while (pageOffset <= this.numbers.length - 1) {
             System.out.print("The First ");
@@ -26,9 +26,9 @@ public class Printer{
             System.out.println("\n");
 
             for (rowOffset=pageOffset; rowOffset <= pageOffset+this.lines - 1;rowOffset++) {
-                for (colum = 0; colum <= this.columns - 1; colum++)
-                    if (rowOffset + colum * this.lines <= this.numbers.length-1)
-                        System.out.printf("%10d", this.numbers[rowOffset + colum * this.lines]);
+                for (column = 0; column <= this.columns - 1; column++)
+                    if (rowOffset + column * this.lines <= this.numbers.length-1)
+                        System.out.printf("%10d", this.numbers[rowOffset + column * this.lines]);
                 System.out.println();
             }
             System.out.println("\f");
